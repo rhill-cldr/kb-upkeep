@@ -1,0 +1,2 @@
+update:
+    uv lock --upgrade

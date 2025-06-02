@@ -1,0 +1,11 @@
+
+Query:
+{{ query }}
+
+
+Result:
+{{ result }}
+
+----
+
+

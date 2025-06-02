@@ -1,0 +1,28 @@
+
+syntax = "proto3";
+
+package upkeep;
+
+service Upkeep {
+
+  rpc UpdateOpenAiApiKey (UpdateOpenAiApiKeyRequest) returns (UpdateOpenAiApiKeyResponse) {}
+  rpc AddCompletionsHeader (UpdateCompletionsHeadersRequest) returns (UpdateCompletionsHeadersResponse) {}
+
+}
+
+message UpdateOpenAiApiKeyRequest {
+  string openai_api_key = 1;
+}
+
+message UpdateOpenAiApiKeyResponse {
+  string test_response = 1;
+}
+
+message UpdateCompletionsHeadersRequest {
+  map<string, string> headers = 1;
+}
+
+message UpdateCompletionsHeadersResponse {
+  map<string, string> headers = 1;
+}
+
