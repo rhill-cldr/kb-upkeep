@@ -1,3 +1,4 @@
+import os
 import contextlib
 import uvicorn
 from starlette.applications import Starlette
@@ -16,5 +17,7 @@ app = Starlette(
 
 if __name__ == "__main__":
     #main.mcp.run(transport="sse", mount_path="/")
-    uvicorn.run(app,host='192.168.1.55',port=8000)
+    ip_addr = os.environ.get("IP_ADDRESS", "0.0.0.0")
+    mcp_port = os.environ.get("MCP_PORT", 8000)
+    uvicorn.run(app,host=ip_addr, port=mcp_port)
 
